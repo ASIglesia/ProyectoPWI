@@ -1,0 +1,117 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    color: black;
+}
+
+/*Barra superior, usando bootstrap*/
+nav{
+    background-color: rgb(163, 222, 230);
+    border-bottom: 2px outset black;
+}
+.logo1{
+    width: 30px;
+    height: 30px;
+}
+.nombreMarca{
+    font-family: "Georgia", serif, inherit;
+}
+
+/*Cabecera, con descripcion acotada y login links*/
+header{
+    display: flex;
+    height: 75px;
+    background-color: rgb(163, 222, 230);
+    flex-direction: row;
+    align-items: center;
+}
+.divCabeza{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 5px;
+    flex-grow: 5;
+}
+.divCabLogIn{
+    flex-grow: 1;
+}
+.listaCab{
+    list-style: none;
+    font-size: 15px;
+    justify-content: center;
+}
+h1{
+    font-size: 30px;
+}
+.subTexto{
+    font-size: 12.5px;
+}
+.logo2{
+    width: 75px;
+    height: 75px;
+    position: sticky;
+}
+
+/*Cuerpo Principal, usando grid, con adaptación por tamaño de pantalla, idealmente preparar para que puedaser adaptado dinamicamente*/
+.cuerpoNoticias{
+    display: grid;
+    height: 500px;
+    grid-template: 1fr 1fr/1fr 1fr 1fr;
+}
+.cajaPr{
+    background-color: cadetblue;
+    border: 5px double black;
+}
+@media (max-width:768px) {
+    .cuerpoNoticias{
+        height: fit-content;
+        grid-template: 1fr 1fr 1fr/1fr 1fr;
+    }    
+}
+@media (max-width:320px) {
+    .cuerpoNoticias{
+        grid-template: 1fr 1fr 1fr 1fr 1fr 1fr/1fr ;
+        height: fit-content;
+    }    
+}
+/*Cuerpo Secundario, si es necesario, para? noticias varias? o grupos de noticias por categoria*/
+.cuerpoSecundario{
+    margin-top: 15px;
+}
+.cajaSc{
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width:768px) {
+    .cajaSc{
+        flex-wrap: wrap;
+    }    
+}
+/*Barra Inferior, contiene informacion de contacto y legal segun necesario, usando flexbox*/
+footer{
+    position: sticky;
+    display: flex;
+    background-color: rgb(163, 222, 230);
+    padding: 5px;
+    flex-direction: column;
+}
+.listaInf{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.textoLegal{
+    font-size: 10px;
+}
+/*Lista de categorias*/
+.listaCat{
+    list-style: none;
+    
+}
+.catUno{
+    color: black;
+}
