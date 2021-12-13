@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <%-include('../partials/nav') %>
+
+    <%-include('../partials/header') %>
+
+    <main class="cuerpoForm">
+        <h2 class="tituloForm">Registro de Nuevo Usuario</h2>
+        <form class="formBox" method="POST" action="/registrate">
+            <div class="item-form">
+                <label for="nombre_usuario" class="form-label">Nombre del Usuario</label>
+                <input type="text" class="form-control" id="nombre_usuario" name="nombre_usuario" placeholder="Usuario">
+            </div>
+            <%# esto deberia ser eliminado en el caso de una pagina segura, a menos que se permita que cualquier persona sea un autor, aunque eso haria que esta categoria sea irrelevante, por eso se dejara aqui para el ingreso de los primeros usuarios o hasta que la pagina necesite seguridad real%>
+            <div class="item-form">
+                <label for="nivel_acceso" class="form-label">Tipo de Usuario</label><br>
+                <input type="radio" class="checkbox-control" id="nivel_acceso" name="nivel_acceso" value="lector">
+                <label for="nivel_acceso">Soy un Lector</label><br>
+                <input type="radio" class="checkbox-control" id="nivel_acceso" name="nivel_acceso" value="autor">
+                <label for="nivel_acceso">Soy un Autor</label><br>
+                <input type="radio" class="checkbox-control" id="nivel_acceso" name="nivel_acceso" value="moderador">
+                <label for="nivel_acceso">Soy un Moderador</label><br>
+            </div>
+            <div class="item-form">
+                <label for="contraseña" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Contraseña">
+            </div>
+            <div class="item-form">
+                <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento">
+            </div>
+            <div class="item-form">
+                <label for="emailusuario" class="form-label">Email</label>
+                <input type="email" class="form-control" id="emailusuario" name="emailusuario" placeholder="usuario@email.com">
+            </div>
+            <button type="submit" class="botonSubmitUsuario">Crear Usuario</button>
+          </form>
+    </main>
+    <%#Nota: no posee indicador de error en caso de valores repetidos o NULL, se tendria que integrar un javascript pra determinar que ocurre en esos casos %> 
+    <%-include('../partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

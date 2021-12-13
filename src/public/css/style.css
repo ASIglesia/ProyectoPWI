@@ -5,7 +5,6 @@ a{
 body{
     color: black;
 }
-
 /*Barra superior, usando bootstrap*/
 nav{
     background-color: rgb(163, 222, 230);
@@ -18,7 +17,6 @@ nav{
 .nombreMarca{
     font-family: "Georgia", serif, inherit;
 }
-
 /*Cabecera, con descripcion acotada y login links*/
 header{
     display: flex;
@@ -46,14 +44,29 @@ h1{
     font-size: 30px;
 }
 .subTexto{
-    font-size: 12.5px;
+    font-size: 15px;
+}
+@media (max-width:768px) {
+    h1{
+        font-size: 27.5px;
+    }
+    .subTexto{
+        font-size: 12.5px;
+    }
+}
+@media (max-width:320px) {
+    h1{
+        font-size: 25px;
+    }
+    .subTexto{
+        font-size: 10px;
+    }   
 }
 .logo2{
     width: 75px;
     height: 75px;
     position: sticky;
 }
-
 /*Cuerpo Principal, usando grid, con adaptación por tamaño de pantalla, idealmente preparar para que puedaser adaptado dinamicamente*/
 .cuerpoNoticias{
     display: grid;
@@ -83,11 +96,19 @@ h1{
 .cajaSc{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.noticiaSc{
+    width: 33%;
 }
 @media (max-width:768px) {
+    .noticiaSc{
+        width: fit-content;
+    }
     .cajaSc{
-        flex-wrap: wrap;
-    }    
+        justify-content: left;
+    }
 }
 /*Barra Inferior, contiene informacion de contacto y legal segun necesario, usando flexbox*/
 footer{
@@ -110,8 +131,57 @@ footer{
 /*Lista de categorias*/
 .listaCat{
     list-style: none;
-    
 }
 .catUno{
     color: black;
+}
+/*listado de noticias por categoria*/
+.cuerpoNoticiasCat{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.cajaScCat{
+    width: 100%;
+}
+/*Registro e Inicio de sesion*/
+.cuerpoForm{
+    display: flex;
+    background-color: lightgray;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 15px;
+}
+.tituloForm{
+    font-size: 35px;
+    justify-self: center;
+    size: fit-content;
+}
+.formBox{
+    padding: 10px;
+    min-width: 33%;
+    max-width: 600px ;
+    border: black double 5px;
+    background-color: cadetblue;
+}
+.item-form{
+    padding: 10px;
+}
+.form-label{
+    font-size: 25px;
+}
+.form-control{
+    padding: 10px;
+    max-width: 500px;
+}
+.checkbox-control{
+    width: 15px;
+}
+.botonSubmitUsuario{
+    background-color: rgb(119, 63, 175);
+    border: black 3px double ;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 17.5px;
 }

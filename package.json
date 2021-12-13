@@ -1,0 +1,28 @@
+{
+  "name": "proyectopwi",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000P\u0000r\u0000o\u0000y\u0000e\u0000c\u0000t\u0000o\u0000P\u0000W\u0000I\u0000\r\u0000 \u0000#\u0000 \u0000P\u0000r\u0000o\u0000y\u0000e\u0000c\u0000t\u0000o\u0000P\u0000W\u0000I\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ASIglesia/ProyectoPWI.git"
+  },
+  "author": "Iglesias Agustin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ASIglesia/ProyectoPWI/issues"
+  },
+  "homepage": "https://github.com/ASIglesia/ProyectoPWI#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
